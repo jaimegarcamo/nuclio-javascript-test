@@ -1,3 +1,4 @@
+
 const precio = 30;
 console.log(precio);
 
@@ -81,10 +82,66 @@ console.log(totalPrice);
 
 
 
-function repeatStr (n, s) {
-    for(let i=0;i<n;i+=1){
-      return s;  
-    }
+//Kata codewars: Pasando edad del padre y del hijo, cuantos años hace que el padre tenia el doble de edad que el hijo, o cuantos años quedan para que pase
+const twiceAsOld = (dadYearsOld, sonYearsOld) => {
+    return Math.abs(dadYearsOld - (sonYearsOld * 2));
 };
 
-console.log(repeatStr(6,'*'));
+console.log(twiceAsOld(36,7));
+
+
+//Kata codewars: Pasamos 2 arrays y tiene que devolvernos un array que junte los otros 2 y los ordene ascendentemente (y si hay valores repetidos, que solo se quede con los unicos)
+const mergeArrays = (arr1, arr2) => {
+
+    const arr3 = arr1.concat(arr2)
+                .sort(function(a, b){return a-b});
+    return [...new Set(arr3)];
+};
+
+const arr1 = [1,3,5,7,9];
+const arr2 = [10,8,6,4,2];
+console.log(mergeArrays(arr1, arr2));
+
+
+
+
+//Kata codewars: Pasand 2 listas de enteros positivos que representan el area de 2 cuboides (multiplicacion de todos sus elementos), devolver la diferencia entre las areas de los 2 cuboides pasados, independientemente de cual sea mas grande
+
+const findDifference = (a, b) => {
+
+    let areaA = 1;
+    let areaB = 1;
+
+    for(let i = 0; i < a.length; i += 1){
+        areaA = areaA * a[i];
+    };
+
+    for(let j = 0; j < b.length; j += 1){
+        areaB = areaB * b[j];
+    };
+
+    return Math.abs(areaA - areaB);
+    //return Math.abs(a.reduce((previous, current) => previous * current) - b.reduce((previous, current) => previous * current));
+
+};
+
+console.log(findDifference([3, 2, 5], [1, 4, 4]));
+
+
+
+
+
+//Kata codewars: pasamos una lista de numeros y strings y tiene que devolver la suma de todos los elementos (incluidos los strings)
+const sumMix = (x) => {
+    let suma = 0;
+    
+    for(let i = 0; i < x.length; i += 1){
+        suma = suma + x[i]*1;
+    };
+
+    return suma;
+
+    
+};
+
+console.log(sumMix([9, 3, '7', '3']));
