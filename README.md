@@ -1,3 +1,1 @@
 # nuclio-javascript-test
-
-- Test
