@@ -82,6 +82,17 @@ console.log(totalPrice);
 
 
 
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------
+
 //Kata codewars: Pasando edad del padre y del hijo, cuantos años hace que el padre tenia el doble de edad que el hijo, o cuantos años quedan para que pase
 const twiceAsOld = (dadYearsOld, sonYearsOld) => {
     return Math.abs(dadYearsOld - (sonYearsOld * 2));
@@ -101,7 +112,6 @@ const mergeArrays = (arr1, arr2) => {
 const arr1 = [1,3,5,7,9];
 const arr2 = [10,8,6,4,2];
 console.log(mergeArrays(arr1, arr2));
-
 
 
 
@@ -145,3 +155,8 @@ const sumMix = (x) => {
 };
 
 console.log(sumMix([9, 3, '7', '3']));
+
+
+
+//-----------------------------------------------------------------
+
